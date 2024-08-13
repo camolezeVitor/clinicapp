@@ -2,6 +2,7 @@ import { UsuarioDTO } from "../dtos/usuario";
 import { ConfiguracoesDeUsuario } from "./configs-usuario"
 
 export class Usuario {
+    
     login: string;
     nomeUsuario: string;
     configuracoesDoUsuario: ConfiguracoesDeUsuario;

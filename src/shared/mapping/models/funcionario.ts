@@ -3,6 +3,7 @@ import { Pessoa } from "./pessoa";
 import { Usuario } from "./usuario";
 
 export class Funcionario {
+    
     id: string;
     cargo: string;
     formacao: string;

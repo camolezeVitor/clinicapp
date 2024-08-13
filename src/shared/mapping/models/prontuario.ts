@@ -1,6 +1,7 @@
 import { ProntuarioDTO } from "../dtos/prontuario";
 
 export class Prontuario {
+    
     id: string;
     contexto: string;
     prontuario: string;
