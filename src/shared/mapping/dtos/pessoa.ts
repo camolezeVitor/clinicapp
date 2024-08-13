@@ -1,4 +1,4 @@
-import { EnderecoDto } from "./endereco"
+import { EnderecoDTO } from "./endereco"
 
 export type PessoaDTO = {
     id: string,
@@ -9,5 +9,5 @@ export type PessoaDTO = {
     dataCadastro: Date,
     foto: Blob,
     telefoneCelular: string,
-    endereco: EnderecoDto
+    endereco: EnderecoDTO
 }
