@@ -1,4 +1,4 @@
-import { EnderecoDto } from "../dtos/endereco";
+import { EnderecoDTO } from "../dtos/endereco";
 
 export class Endereco {
 
@@ -9,7 +9,7 @@ export class Endereco {
     numero: number;
     complemento: string;
 
-    constructor(endereco: EnderecoDto) {
+    constructor(endereco: EnderecoDTO) {
         this.cep = endereco.cep;
         this.cidade = endereco.cidade;
         this.uf = endereco.uf;

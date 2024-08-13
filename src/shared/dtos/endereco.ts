@@ -1,4 +1,4 @@
-export type EnderecoDto = {
+export type EnderecoDTO = {
     cep: string;
     cidade: string;
     uf: string;
