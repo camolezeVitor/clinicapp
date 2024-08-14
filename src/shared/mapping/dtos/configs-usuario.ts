@@ -1,3 +1,3 @@
 import { ConfiguracoesDoUsuario } from "@mapping/core";
 
-export type ConfiguracoesDeUsuarioDTO = ConfiguracoesDoUsuario;
+export type ConfiguracoesDoUsuarioDTO = ConfiguracoesDoUsuario;

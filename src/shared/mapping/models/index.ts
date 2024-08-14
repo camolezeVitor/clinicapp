@@ -1,0 +1,14 @@
+export { ClinicaImpl } from "./clinica";
+export { ConfiguracoesDoUsuarioImpl } from "./configs-usuario";
+export { ConsultaImpl } from "./consulta";
+export { ContaCorrenteImpl } from "./conta-corrente";
+export { ContaImpl } from "./conta";
+export { DoencaImpl } from "./doenca";
+export { EnderecoImpl } from "./endereco";
+export { FuncionarioImpl } from "./funcionario";
+export { PacienteImpl } from "./paciente";
+export { PagamentoImpl } from "./pagamento";
+export { PessoaImpl } from "./pessoa";
+export { ProntuarioImpl } from "./prontuario";
+export { ServicoImpl } from "./servico";
+export { UsuarioImpl } from "./usuario";

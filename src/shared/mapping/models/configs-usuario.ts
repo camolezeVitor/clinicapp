@@ -1,6 +1,6 @@
-import { ConfiguracoesDeUsuarioDTO } from "../dtos/configs-usuario"
+import { ConfiguracoesDoUsuarioDTO } from "../dtos/configs-usuario"
 
-export class ConfiguracoesDeUsuarioImpl {
+export class ConfiguracoesDoUsuarioImpl {
     
     darkMode: boolean;
     sideBarInteligente: boolean;
@@ -9,7 +9,7 @@ export class ConfiguracoesDeUsuarioImpl {
     estiloDeAgendaPadrao: string;
     configuracaoInicialDoLayoutPorIds: Array<string>;
 
-    constructor (configuracoesDTO: ConfiguracoesDeUsuarioDTO) {
+    constructor (configuracoesDTO: ConfiguracoesDoUsuarioDTO) {
         this.darkMode = configuracoesDTO.darkMode;
         this.sideBarInteligente = configuracoesDTO.sideBarInteligente;
         this.pressetDefinido = configuracoesDTO.pressetDefinido;

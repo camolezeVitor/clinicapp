@@ -1,0 +1,14 @@
+export { ClinicaDTO } from "./clinica";
+export { ConfiguracoesDoUsuarioDTO } from "./configs-usuario";
+export { ConsultaDTO } from "./consulta";
+export { ContaCorrenteDTO } from "./conta-corrente";
+export { ContaDTO } from "./conta";
+export { DoencaDTO } from "./doenca";
+export { EnderecoDTO } from "./endereco";
+export { FuncionarioDTO } from "./funcionario";
+export { PacienteDTO } from "./paciente";
+export { PagamentoDTO } from "./pagamento";
+export { PessoaDTO } from "./pessoa";
+export { ProntuarioDTO } from "./prontuario";
+export { ServicoDTO } from "./servico";
+export { UsuarioDTO } from "./usuario";
