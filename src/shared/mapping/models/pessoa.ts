@@ -1,7 +1,8 @@
-import { PessoaDTO } from "../dtos/pessoa";
-import { EnderecoImpl } from "./endereco";
+import { Pessoa } from "@mapping/core";
+import { PessoaDTO } from "@mapping/dtos";
+import { EnderecoImpl } from "@mapping/models";
 
-export class PessoaImpl {
+export class PessoaImpl implements Pessoa {
     
     id: string;
     nome: string;
@@ -9,19 +10,22 @@ export class PessoaImpl {
     cpf: string;
     dataNascimento: Date;
     dataCadastro: Date;
-    foto: Blob;
+    foto?: Blob;
     telefoneCelular: string;
-    endereco: EnderecoImpl;
+    endereco?: EnderecoImpl;
 
-    constructor(pessoa: PessoaDTO) {
-        this.id = pessoa.id;
-        this.nome = pessoa.nome;
-        this.rg = pessoa.rg;
-        this.cpf = pessoa.cpf;
-        this.dataNascimento = pessoa.dataNascimento;
-        this.dataCadastro = pessoa.dataCadastro;
-        this.foto = pessoa.foto;
-        this.telefoneCelular = pessoa.telefoneCelular;
-        this.endereco = new EnderecoImpl(pessoa.endereco); 
+    constructor(pessoaDto: PessoaDTO) {
+
+        const { endereco } = pessoaDto;
+
+        this.id = pessoaDto.id;
+        this.nome = pessoaDto.nome;
+        this.rg = pessoaDto.rg;
+        this.cpf = pessoaDto.cpf;
+        this.dataNascimento = pessoaDto.dataNascimento;
+        this.dataCadastro = pessoaDto.dataCadastro;
+        this.foto = pessoaDto.foto;
+        this.telefoneCelular = pessoaDto.telefoneCelular;
+        this.endereco = endereco ? new EnderecoImpl(endereco) : undefined; 
     }
 }

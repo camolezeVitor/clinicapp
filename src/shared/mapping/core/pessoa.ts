@@ -5,6 +5,6 @@ export interface Pessoa {
     cpf: string,
     dataNascimento: Date,
     dataCadastro: Date,
-    foto: Blob | undefined,
+    foto?: Blob,
     telefoneCelular: string,
 }

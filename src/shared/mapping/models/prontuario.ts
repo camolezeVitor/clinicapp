@@ -1,6 +1,7 @@
-import { ProntuarioDTO } from "../dtos/prontuario";
+import { Prontuario } from "@mapping/core";
+import { ProntuarioDTO } from "@mapping/dtos";
 
-export class ProntuarioImpl {
+export class ProntuarioImpl implements Prontuario {
     
     id: string;
     contexto: string;

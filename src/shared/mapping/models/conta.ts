@@ -1,6 +1,7 @@
-import { ContaDTO } from "../dtos/conta";
+import { Conta } from "@mapping/core";
+import { ContaDTO } from "@mapping/dtos";
 
-export class ContaImpl {
+export class ContaImpl implements Conta {
 
     id: string;
     nome: string;

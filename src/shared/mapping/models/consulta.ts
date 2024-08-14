@@ -1,13 +1,14 @@
-import { ConsultaDTO } from "../dtos/consulta";
-import { FuncionarioImpl } from "./funcionario"
-import { PacienteImpl } from "./paciente"
-import { ServicoImpl } from "./servico"
+import { Consulta } from "@mapping/core";
+import { ConsultaDTO } from "@mapping/dtos";
+import { FuncionarioImpl } from "@mapping/models";
+import { PacienteImpl } from "@mapping/models";
+import { ServicoImpl } from "@mapping/models";
 
-export class ConsultaImpl {
+export class ConsultaImpl implements Consulta {
 
-    paciente: PacienteImpl;
-    funcionario: FuncionarioImpl;
-    servicos: Array<ServicoImpl>;
+    paciente?: PacienteImpl;
+    funcionario?: FuncionarioImpl;
+    servicos?: Array<ServicoImpl>;
     valor: number;
     valorTotalPago: number;
     data: Date;
@@ -17,9 +18,14 @@ export class ConsultaImpl {
     foiPago: boolean;
 
     constructor(consultaDto: ConsultaDTO) {
-        this.paciente = new PacienteImpl(consultaDto.paciente);
-        this.funcionario = new FuncionarioImpl(consultaDto.funcionario);
-        this.servicos = consultaDto.servicos.map(servico => (new ServicoImpl(servico)));
+
+        //Parâmetros opcionais
+        const { paciente, funcionario, servicos } = consultaDto;
+
+        this.paciente = paciente ? new PacienteImpl(paciente) : undefined;
+        this.funcionario = funcionario ? new FuncionarioImpl(funcionario) : undefined;
+        this.servicos = servicos ? servicos.map(servico => (new ServicoImpl(servico))) : undefined;
+
         this.valor = consultaDto.valor;
         this.valorTotalPago = consultaDto.valorTotalPago;
         this.data = consultaDto.data;

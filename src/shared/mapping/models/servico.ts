@@ -1,6 +1,7 @@
-import { ServicoDTO } from "../dtos/servico";
+import { Servico } from "@mapping/core";
+import { ServicoDTO } from "@mapping/dtos";
 
-export class ServicoImpl {
+export class ServicoImpl implements Servico {
     
     id: string;
     tipoServico: string;

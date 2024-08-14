@@ -1,6 +1,7 @@
-import { PagamentoDTO } from "../dtos/pagamento";
+import { Pagamento } from "@mapping/core";
+import { PagamentoDTO } from "@mapping/dtos";
 
-export class PagamentoImpl {
+export class PagamentoImpl implements Pagamento {
     
     valor: number;
     formaDePagamento: string;

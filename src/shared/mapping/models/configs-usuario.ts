@@ -1,6 +1,7 @@
-import { ConfiguracoesDoUsuarioDTO } from "../dtos/configs-usuario"
+import { ConfiguracoesDoUsuario } from "@mapping/core";
+import { ConfiguracoesDoUsuarioDTO } from "@mapping/dtos";
 
-export class ConfiguracoesDoUsuarioImpl {
+export class ConfiguracoesDoUsuarioImpl implements ConfiguracoesDoUsuario {
     
     darkMode: boolean;
     sideBarInteligente: boolean;

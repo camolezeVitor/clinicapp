@@ -1,6 +1,7 @@
-import { DoencaDTO } from "../dtos/doenca";
+import { Doenca } from "@mapping/core";
+import { DoencaDTO } from "@mapping/dtos";
 
-export class DoencaImpl {
+export class DoencaImpl implements Doenca {
 
     id: string;
     nome: string;

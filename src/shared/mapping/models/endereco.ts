@@ -1,6 +1,7 @@
-import { EnderecoDTO } from "../dtos/endereco";
+import { Endereco } from "@mapping/core";
+import { EnderecoDTO } from "@mapping/dtos";
 
-export class EnderecoImpl {
+export class EnderecoImpl implements Endereco {
 
     cep: string;
     cidade: string;
