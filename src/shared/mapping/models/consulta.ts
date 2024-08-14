@@ -1,13 +1,13 @@
 import { ConsultaDTO } from "../dtos/consulta";
-import { Funcionario } from "./funcionario"
-import { Paciente } from "./paciente"
-import { Servico } from "./servico"
+import { FuncionarioImpl } from "./funcionario"
+import { PacienteImpl } from "./paciente"
+import { ServicoImpl } from "./servico"
 
-export class Consulta {
+export class ConsultaImpl {
 
-    paciente: Paciente;
-    funcionario: Funcionario;
-    servicos: Array<Servico>;
+    paciente: PacienteImpl;
+    funcionario: FuncionarioImpl;
+    servicos: Array<ServicoImpl>;
     valor: number;
     valorTotalPago: number;
     data: Date;
@@ -17,9 +17,9 @@ export class Consulta {
     foiPago: boolean;
 
     constructor(consultaDto: ConsultaDTO) {
-        this.paciente = new Paciente(consultaDto.paciente);
-        this.funcionario = new Funcionario(consultaDto.funcionario);
-        this.servicos = consultaDto.servicos.map(servico => (new Servico(servico)));
+        this.paciente = new PacienteImpl(consultaDto.paciente);
+        this.funcionario = new FuncionarioImpl(consultaDto.funcionario);
+        this.servicos = consultaDto.servicos.map(servico => (new ServicoImpl(servico)));
         this.valor = consultaDto.valor;
         this.valorTotalPago = consultaDto.valorTotalPago;
         this.data = consultaDto.data;

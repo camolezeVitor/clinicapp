@@ -1,11 +1,11 @@
 import { UsuarioDTO } from "../dtos/usuario";
-import { ConfiguracoesDeUsuario } from "./configs-usuario"
+import { ConfiguracoesDeUsuarioImpl } from "./configs-usuario"
 
-export class Usuario {
+export class UsuarioImpl {
     
     login: string;
     nomeUsuario: string;
-    configuracoesDoUsuario: ConfiguracoesDeUsuario;
+    configuracoesDoUsuario: ConfiguracoesDeUsuarioImpl;
 
     constructor(usuarioDto: UsuarioDTO) {
         this.login = usuarioDto.login;

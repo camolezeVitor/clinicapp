@@ -1,6 +1,6 @@
 import { EnderecoDTO } from "../dtos/endereco";
 
-export class Endereco {
+export class EnderecoImpl {
 
     cep: string;
     cidade: string;

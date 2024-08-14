@@ -1,7 +1,7 @@
 import { PessoaDTO } from "../dtos/pessoa";
-import { Endereco } from "./endereco";
+import { EnderecoImpl } from "./endereco";
 
-export class Pessoa {
+export class PessoaImpl {
     
     id: string;
     nome: string;
@@ -11,7 +11,7 @@ export class Pessoa {
     dataCadastro: Date;
     foto: Blob;
     telefoneCelular: string;
-    endereco: Endereco;
+    endereco: EnderecoImpl;
 
     constructor(pessoa: PessoaDTO) {
         this.id = pessoa.id;
@@ -22,6 +22,6 @@ export class Pessoa {
         this.dataCadastro = pessoa.dataCadastro;
         this.foto = pessoa.foto;
         this.telefoneCelular = pessoa.telefoneCelular;
-        this.endereco = new Endereco(pessoa.endereco); 
+        this.endereco = new EnderecoImpl(pessoa.endereco); 
     }
 }

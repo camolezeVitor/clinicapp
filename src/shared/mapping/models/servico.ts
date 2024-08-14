@@ -1,6 +1,6 @@
 import { ServicoDTO } from "../dtos/servico";
 
-export class Servico {
+export class ServicoImpl {
     
     id: string;
     tipoServico: string;

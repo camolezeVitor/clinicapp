@@ -1,6 +1,6 @@
 import { ContaDTO } from "../dtos/conta";
 
-export class Conta {
+export class ContaImpl {
 
     id: string;
     nome: string;

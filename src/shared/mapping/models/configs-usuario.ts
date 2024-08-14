@@ -1,6 +1,6 @@
 import { ConfiguracoesDeUsuarioDTO } from "../dtos/configs-usuario"
 
-export class ConfiguracoesDeUsuario {
+export class ConfiguracoesDeUsuarioImpl {
     
     darkMode: boolean;
     sideBarInteligente: boolean;

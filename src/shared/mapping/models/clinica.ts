@@ -1,15 +1,15 @@
 import { ClinicaDTO } from "../dtos/clinica";
-import { Conta } from "./conta"
-import { Endereco } from "./endereco";
+import { ContaImpl } from "./conta"
+import { EnderecoImpl } from "./endereco";
 
-export class Clinica {
+export class ClinicaImpl {
     nomeDaClinica: string;
-    contas: Array<Conta>;
-    endereco: Endereco;
+    contas: Array<ContaImpl>;
+    endereco: EnderecoImpl;
 
     constructor(clinicaDto: ClinicaDTO) {
         this.nomeDaClinica = clinicaDto.nomeDaClinica;
-        this.contas = clinicaDto.contas.map(conta => (new Conta(conta)));
-        this.endereco = new Endereco(clinicaDto.endereco);
+        this.contas = clinicaDto.contas.map(conta => (new ContaImpl(conta)));
+        this.endereco = new EnderecoImpl(clinicaDto.endereco);
     }
 }

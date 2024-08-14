@@ -1,6 +1,6 @@
 import { DoencaDTO } from "../dtos/doenca";
 
-export class Doenca {
+export class DoencaImpl {
 
     id: string;
     nome: string;

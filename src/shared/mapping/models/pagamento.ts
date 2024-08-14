@@ -1,6 +1,6 @@
 import { PagamentoDTO } from "../dtos/pagamento";
 
-export class Pagamento {
+export class PagamentoImpl {
     
     valor: number;
     formaDePagamento: string;

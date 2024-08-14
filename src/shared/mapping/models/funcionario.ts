@@ -1,22 +1,22 @@
 import { FuncionarioDTO } from "../dtos/funcionario";
-import { Pessoa } from "./pessoa";
-import { Usuario } from "./usuario";
+import { PessoaImpl } from "./pessoa";
+import { UsuarioImpl } from "./usuario";
 
-export class Funcionario {
+export class FuncionarioImpl {
     
     id: string;
     cargo: string;
     formacao: string;
     salario: number;
-    pessoa: Pessoa;
-    usuario: Usuario;
+    pessoa: PessoaImpl;
+    usuario: UsuarioImpl;
 
     constructor(funcionarioDTO: FuncionarioDTO) {
         this.id = funcionarioDTO.id;
         this.cargo = funcionarioDTO.cargo;
         this.formacao = funcionarioDTO.formacao;
         this.salario = funcionarioDTO.salario;
-        this.pessoa = new Pessoa(funcionarioDTO.pessoa);
-        this.usuario = new Usuario(funcionarioDTO.usuario);
+        this.pessoa = new PessoaImpl(funcionarioDTO.pessoa);
+        this.usuario = new UsuarioImpl(funcionarioDTO.usuario);
     }
 }
