@@ -3,6 +3,6 @@ import { ContaDTO } from "./conta"
 import { EnderecoDTO } from "./endereco"
 
 export type ClinicaDTO = {
-    contas: Array<ContaDTO>,
-    endereco: EnderecoDTO,
+    contas?: Array<ContaDTO>,
+    endereco?: EnderecoDTO,
 } & Clinica;

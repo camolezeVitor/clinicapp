@@ -3,6 +3,6 @@ import { PessoaDTO } from "./pessoa"
 import { UsuarioDTO } from "./usuario"
 
 export type FuncionarioDTO = {
-    pessoa: PessoaDTO,
-    usuario: UsuarioDTO,
+    pessoa?: PessoaDTO,
+    usuario?: UsuarioDTO,
 } & Funcionario;

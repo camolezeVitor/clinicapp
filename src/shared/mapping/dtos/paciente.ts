@@ -5,8 +5,8 @@ import { PessoaDTO } from "./pessoa"
 import { ProntuarioDTO } from "./prontuario";
 
 export type PacienteDTO = {
-    pessoa: PessoaDTO,
-    prontuarios: Array<ProntuarioDTO>,
-    contaCorrente: ContaCorrenteDTO,
-    doencas: Array<DoencaDTO>
+    pessoa?: PessoaDTO,
+    prontuarios?: Array<ProntuarioDTO>,
+    contaCorrente?: ContaCorrenteDTO,
+    doencas?: Array<DoencaDTO>
 } & Paciente;

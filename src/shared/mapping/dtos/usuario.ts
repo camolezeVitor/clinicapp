@@ -1,6 +1,6 @@
 import { Usuario } from "@mapping/core"
-import { ConfiguracoesDeUsuarioDTO } from "./configs-usuario"
+import { ConfiguracoesDoUsuarioDTO } from "./configs-usuario"
 
 export type UsuarioDTO = {
-    configuracoesDoUsuario: ConfiguracoesDeUsuarioDTO,
+    configuracoesDoUsuario?: ConfiguracoesDoUsuarioDTO,
 } & Usuario;
