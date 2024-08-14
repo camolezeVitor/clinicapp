@@ -1,8 +1,3 @@
-export type ContaDTO = {
-    id: string,
-    nome: string,
-    descricao: string,
-    valor: number,
-    dataDePagamento: Date,
-    foiPago: boolean
-}
+import { Conta } from "@mapping/core";
+
+export type ContaDTO = Conta;

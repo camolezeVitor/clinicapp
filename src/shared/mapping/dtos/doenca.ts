@@ -1,7 +1,3 @@
-export type DoencaDTO = {
-    id: string,
-    nome: string,
-    codigo: string,
-    descricao: string, 
-    tipo: string,
-}
+import { Doenca } from "@mapping/core";
+
+export type DoencaDTO = Doenca;

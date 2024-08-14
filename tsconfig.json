@@ -22,7 +22,14 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@minha-pasta-teste": ["./minha-pasta-teste"],
+      "@mapping/core": ["./src/shared/mapping/core"],
+      "@mapping/dtos": ["./src/shared/mapping/dtos"],
+      "@mapping/models": ["./src/shared/mapping/models"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,5 +1,3 @@
-export type ProntuarioDTO = {
-    id: string,
-    contexto: string,
-    prontuario: string,
-}
+import { Prontuario } from "@mapping/core";
+
+export type ProntuarioDTO = Prontuario;

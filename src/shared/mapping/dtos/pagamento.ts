@@ -1,4 +1,3 @@
-export type PagamentoDTO = {
-    valor: number,
-    formaDePagamento: string,
-}
+import { Pagamento } from "@mapping/core";
+
+export type PagamentoDTO = Pagamento;

@@ -1,8 +1,3 @@
-export type EnderecoDTO = {
-    cep: string,
-    cidade: string,
-    uf: string,
-    bairro: string,
-    numero: number,
-    complemento: string,
-}
+import { Endereco } from "@mapping/core";
+
+export type EnderecoDTO = Endereco;
