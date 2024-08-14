@@ -4,6 +4,7 @@ import { PessoaDTO } from "./pessoa"
 import { ProntuarioDTO } from "./prontuario";
 
 export type PacienteDTO = {
+    estadoAtual: string;
     pessoa: PessoaDTO,
     prontuarios: Array<ProntuarioDTO>,
     contaCorrente: ContaCorrenteDTO,

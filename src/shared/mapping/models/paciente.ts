@@ -6,6 +6,7 @@ import { Prontuario } from "./prontuario";
 
 export class Paciente {
 
+    estadoAtual: string;
     pessoa: Pessoa;
     prontuarios: Array<Prontuario>;
     contaCorrente: ContaCorrente;
@@ -16,5 +17,6 @@ export class Paciente {
         this.prontuarios = pacienteDto.prontuarios.map(prontuarioDto => (new Prontuario(prontuarioDto)));
         this.contaCorrente = new ContaCorrente(pacienteDto.contaCorrente);
         this.doencas = pacienteDto.doencas.map(doencaDto => (new Doenca(doencaDto)));
+        this.estadoAtual = pacienteDto.estadoAtual;
     }
 }
