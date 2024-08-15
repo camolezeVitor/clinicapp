@@ -1,14 +1,29 @@
-import { Injectable, OnInit } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Codec } from "@mapping/dependencies";
+import { CodecImpl, KeyFactory } from "@private";
 
+/**
+ * @author camolezeVitor
+ * @description
+ * Classe utilizada para a criação de dados encriptados utilizados
+ * nessa aplicação!
+ */
 @Injectable({
     providedIn: "root"
 })
-export class AdvancedEncryptionSystemService implements OnInit {    
+export class AdvancedEncryptionSystemService implements Codec {
 
-  private codec: Codec | null = null;
+  private codec: Codec = new CodecImpl();
 
-  ngOnInit(): void {};
+  private getKey() {
+    return KeyFactory.create();
+  }
 
-  public encryptValue(value: JSON) {};
+  encrypt(value: string): string {
+    return this.codec.encrypt(value, this.getKey());
+  };
+
+  decrypt (value: string) {
+    return this.codec.decrypt(value, this.getKey());
+  };    
 }

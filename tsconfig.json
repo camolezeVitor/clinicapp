@@ -30,7 +30,8 @@
       "@mapping/dtos": ["./src/shared/mapping/dtos"],
       "@mapping/models": ["./src/shared/mapping/models"],
       "@mapping/adapters": ["./src/shared/mapping/adapters"],
-      "@mapping/dependencies": ["./src/shared/mapping/dependencies"]
+      "@mapping/dependencies": ["./src/shared/mapping/dependencies"],
+      "@private": ["./private"]
     }
   },
   "angularCompilerOptions": {
