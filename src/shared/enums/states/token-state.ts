@@ -1,5 +1,5 @@
 export enum TokenState {
     NAO_ARMAZENADA = "tokenNotStored",
-    ARMAZENADA = "tokenStored",
+    VALIDA = "tokenIsValid",
     INVALIDADA = "tokenIsInvalid"
 }
