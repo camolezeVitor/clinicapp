@@ -9,7 +9,7 @@ import { UserFuncionarioState } from "../enums/states/user-funcionario-state";
  * funcionário, para a aplicação desfrutar das informações
  */
 @Injectable({
-    providedIn: "root"
+    providedIn: "root",
 })
 export class UserFuncionarioService {
     
