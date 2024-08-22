@@ -2,11 +2,12 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/c
 import { Inject, Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { TokenService } from "../token/token.service";
+import { JwtToken } from "@mapping/dependencies";
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
 
-    private tokenService: TokenService = Inject(TokenService);
+    private tokenService: JwtToken = Inject(TokenService);
 
     intercept(req: HttpRequest<any>, handler: HttpHandler): Observable<HttpEvent<any>> {
         const token = this.tokenService.getToken()
