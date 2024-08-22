@@ -31,4 +31,7 @@ export class TokenService implements JwtToken {
         return this.jwtToken.verifyTokenState();
     };
 
+    getToken = (): string | null => {
+        return this.jwtToken.getToken();
+    };
 }

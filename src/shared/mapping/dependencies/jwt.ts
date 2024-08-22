@@ -9,4 +9,5 @@ export interface JwtToken {
     storeToken: (token: string) => void;
     clearToken: () => void;
     verifyTokenState: () => Promise<TokenState>;
+    getToken: () => string | null;
 }
