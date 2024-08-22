@@ -31,7 +31,8 @@
       "@mapping/models": ["./src/shared/mapping/models"],
       "@mapping/adapters": ["./src/shared/mapping/adapters"],
       "@mapping/dependencies": ["./src/shared/mapping/dependencies"],
-      "@private": ["./private"]
+      "@private": ["./private"],
+      "@security": ["./src/shared/security"]
     }
   },
   "angularCompilerOptions": {
