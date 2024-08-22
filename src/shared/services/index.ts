@@ -1,0 +1,1 @@
+export { UserFuncionarioService } from "./user-funcionario.service";

@@ -25,14 +25,24 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@minha-pasta-teste": ["./minha-pasta-teste"],
+
+      //MAPEAMENTO DE DADOS
       "@mapping/core": ["./src/shared/mapping/core"],
       "@mapping/dtos": ["./src/shared/mapping/dtos"],
       "@mapping/models": ["./src/shared/mapping/models"],
       "@mapping/adapters": ["./src/shared/mapping/adapters"],
       "@mapping/dependencies": ["./src/shared/mapping/dependencies"],
+
+      //PRIVATE :|
       "@private": ["./private"],
-      "@security": ["./src/shared/security"]
+
+      //UTILITÁRIOS
+      "@security": ["./src/shared/security"],
+      "@services": ["./src/shared/services"],
+
+      //ENUMS
+      "@enums/actions": ["./src/shared/enums/actions"],
+      "@enums/states": ["./src/shared/enums/states"]
     }
   },
   "angularCompilerOptions": {
