@@ -15,18 +15,18 @@ export class UserFuncionarioService {
     
     private usuarioFuncionarioLogado: FuncionarioImpl | null = null;
     private usuarioFuncionarioState: UserFuncionarioState = UserFuncionarioState.NAO_LOGADO;
-    public dialogDeAvisoDeDesconexao: boolean = false;
+    public desconexaoWarn: boolean = false;
     
     constructor() {};
 
     public setFuncionarioLogado(funcionarioLogado: FuncionarioImpl): void {
         this.usuarioFuncionarioLogado = funcionarioLogado;
-        this.dialogDeAvisoDeDesconexao = false;
+        this.desconexaoWarn = false;
     }
 
     public disconectFuncionarioLogado(): void {
         this.usuarioFuncionarioLogado = null;
-        this.dialogDeAvisoDeDesconexao = true;
+        this.desconexaoWarn = true;
     }
 
     public getFuncionarioLogado(): FuncionarioImpl | null {
