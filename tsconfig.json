@@ -42,7 +42,10 @@
 
       //ENUMS
       "@enums/actions": ["./src/shared/enums/actions"],
-      "@enums/states": ["./src/shared/enums/states"]
+      "@enums/states": ["./src/shared/enums/states"],
+
+      //DECORATORS
+      "@decorators": ["./src/shared/decorators"]
     }
   },
   "angularCompilerOptions": {
