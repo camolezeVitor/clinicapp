@@ -3,6 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ApplicationStateService } from 'src/shared/services/application-state.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,10 @@ import { AppComponent } from './app.component';
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+
+    //Global Services
+    ApplicationStateService
   ],
   bootstrap: [AppComponent]
 })
