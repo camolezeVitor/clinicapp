@@ -5,6 +5,4 @@ import { Component } from "@angular/core";
     templateUrl: "container.component.ts",
     styleUrl: "container.component.css"
 })
-export class CLContainerComponent {
-
-}
+export class CLContainerComponent {}
