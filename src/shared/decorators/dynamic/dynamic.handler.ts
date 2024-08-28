@@ -10,7 +10,7 @@ export class DynamicHandler<T> {
 
     constructor(
         private changeListener$: BehaviorSubject<any>,
-        templates: Array<Template<T>>
+        templates: Array<Template<T>>,
     ) {
         this.actualValidationValue = this.changeListener$.getValue();
         this.componentsMap = new Map(templates.map(template => [template.condition, template.component]));
