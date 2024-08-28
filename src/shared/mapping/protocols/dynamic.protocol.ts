@@ -2,6 +2,6 @@ import { Type } from "@angular/core";
 import { DynamicComponentCreationService } from "@services";
 
 export interface DynamicComponentProtocol {
-    dynamicComponentΔ: Type<any> | null | undefined;
-    dynamicServiceΔ: DynamicComponentCreationService
+    dynamicComponent__: Type<any> | null | undefined;
+    dynamicService__: DynamicComponentCreationService
 }

@@ -1,12 +1,11 @@
 import { BehaviorSubject } from "rxjs"
 import { Template } from "./dynamic.types"
-import { Type } from "@angular/core";
 
 export class DynamicHandler<T> {
 
     private actualValidationValue: T;
-    private componentsMap: Map<T, Type<any>>;
-    public templateSubject$: BehaviorSubject<Type<any>>;
+    private componentsMap: Map<T, Function>;
+    public templateSubject$: BehaviorSubject<Function>;
 
     constructor(
         private changeListener$: BehaviorSubject<any>,
@@ -14,7 +13,7 @@ export class DynamicHandler<T> {
     ) {
         this.actualValidationValue = this.changeListener$.getValue();
         this.componentsMap = new Map(templates.map(template => [template.condition, template.component]));
-        this.templateSubject$ = new BehaviorSubject<Type<any>>(this.componentsMap.get(this.actualValidationValue)!);
+        this.templateSubject$ = new BehaviorSubject<Function>(this.componentsMap.get(this.actualValidationValue)!);
 
         this.changeListener$.subscribe(() => 
             this.validateChangeAndEmitOutput()

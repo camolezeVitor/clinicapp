@@ -15,7 +15,7 @@ export class DynamicComponentCreationService {
      */
     private validateImplementation(component: Type<any> | any | unknown) {
 
-        if (component.dynamicComponentΔ == undefined || component.dynamicServiceΔ == undefined) 
+        if (component.dynamicComponent__ == undefined || component.dynamicService__ == undefined) 
             throw Error("Protocolo dinâmico não implementado!");
 
         if (component.constructor.prototype.dynamicHandler == undefined) 

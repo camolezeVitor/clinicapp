@@ -1,8 +1,7 @@
-import { Type } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 
 export type Template<T> = {
-    component: Type<any>,
+    component: Function,
     condition: T;
 }
 
