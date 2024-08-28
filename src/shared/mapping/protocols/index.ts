@@ -1,0 +1,1 @@
+export { DynamicComponentProtocol } from "./dynamic.protocol";

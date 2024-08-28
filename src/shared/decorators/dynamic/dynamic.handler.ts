@@ -6,7 +6,7 @@ export class DynamicHandler<T> {
 
     private actualValidationValue: T;
     private componentsMap: Map<T, Type<any>>;
-    public templateSubject: BehaviorSubject<Type<any>>;
+    public templateSubject$: BehaviorSubject<Type<any>>;
 
     constructor(
         private changeListener$: BehaviorSubject<any>,
@@ -14,7 +14,7 @@ export class DynamicHandler<T> {
     ) {
         this.actualValidationValue = this.changeListener$.getValue();
         this.componentsMap = new Map(templates.map(template => [template.condition, template.component]));
-        this.templateSubject = new BehaviorSubject<Type<any>>(this.componentsMap.get(this.actualValidationValue)!);
+        this.templateSubject$ = new BehaviorSubject<Type<any>>(this.componentsMap.get(this.actualValidationValue)!);
 
         this.changeListener$.subscribe(() => 
             this.validateChangeAndEmitOutput()
@@ -24,7 +24,7 @@ export class DynamicHandler<T> {
     validateChangeAndEmitOutput() {
         if (this.actualValidationValue != this.changeListener$.getValue()) {
             this.actualValidationValue = this.changeListener$.getValue();
-            this.templateSubject.next(this.componentsMap.get(this.actualValidationValue)!);
+            this.templateSubject$.next(this.componentsMap.get(this.actualValidationValue)!);
         }
         return;
     }
