@@ -1,13 +1,11 @@
-import { Component, inject, Type } from "@angular/core";
+import { Component } from "@angular/core";
 import { Dynamic } from "@decorators";
 import { ScreenState } from "@enums/states";
-import { DynamicComponentCreationService, windowChangeTest$ } from "@services";
+import { windowChangeTest$ } from "@services";
 import { MBCLContainerComponent } from "./views/mobile/mb-container.component";
-import { DynamicComponentProtocol } from "@mapping/protocols";
 import { DTCLContainerComponent } from "./views/desktop/dt-container.component";
-import { NgZone } from "@angular/core";
-
-const DynamicTemplate = `@if(dynamicComponent__){<ng-component-outlet [ngComponentOutlet]="dynamicComponent__"/>}`;
+import { DynamicTemplate } from "src/shared/decorators/dynamic/dynamic.types";
+import { DynamicComponent } from "src/shared/components/dynamic.component";
 
 @Component({
   selector: "cl-container",
@@ -20,16 +18,10 @@ const DynamicTemplate = `@if(dynamicComponent__){<ng-component-outlet [ngCompone
     { component: DTCLContainerComponent, condition: ScreenState.DESKTOP }
   ]
 })
-export class CLContainerComponent implements DynamicComponentProtocol {
-  dynamicComponent__: Type<any> | null | undefined = DTCLContainerComponent;
-  dynamicService__: DynamicComponentCreationService = inject(DynamicComponentCreationService);
-  private ngZone: NgZone = inject(NgZone);
+export class CLContainerComponent extends DynamicComponent {
 
   constructor() {
-    this.dynamicService__.observeChanges(this).subscribe(component => {
-      this.ngZone.run(() => {
-        this.dynamicComponent__ = component;
-      });
-    });
+    super();
   }
+
 }

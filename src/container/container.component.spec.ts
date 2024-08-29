@@ -3,17 +3,17 @@ import { CLContainerComponent } from "./container.component";
 
 describe("CLContainerComponent", () => {
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
-          declarations: [
-            CLContainerComponent
-          ],
-        }).compileComponents();
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [
+        CLContainerComponent
+      ],
+    }).compileComponents();
+  });
       
-    it("should exist", () => {
-        const fixture = TestBed.createComponent(CLContainerComponent);
-        const instance = fixture.componentInstance;
-        expect(instance).toBeTruthy();
-    })
+  it("should exist", () => {
+    const fixture = TestBed.createComponent(CLContainerComponent);
+    const instance = fixture.componentInstance;
+    expect(instance).toBeTruthy();
+  })
 })
