@@ -4,8 +4,8 @@ import { ScreenState } from "@enums/states";
 import { windowChangeTest$ } from "@services";
 import { MBCLContainerComponent } from "./views/mobile/mb-container.component";
 import { DTCLContainerComponent } from "./views/desktop/dt-container.component";
-import { DynamicTemplate } from "src/shared/decorators/dynamic/dynamic.types";
-import { DynamicComponent } from "src/shared/components/dynamic.component";
+import { DynamicComponent } from "@components";
+import { DynamicTemplate } from "@constants";
 
 @Component({
   selector: "cl-container",

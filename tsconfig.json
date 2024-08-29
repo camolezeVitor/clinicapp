@@ -34,6 +34,12 @@
       "@mapping/dependencies": ["./src/shared/mapping/dependencies"],
       "@mapping/protocols": ["./src/shared/mapping/protocols"],
 
+      //COMPONENTES
+      "@components": ["./src/shared/components"],
+      
+      //CONSTANTS
+      "@constants": ["./src/shared/constants"],
+
       //PRIVATE :|
       "@private": ["./private"],
 
