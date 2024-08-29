@@ -8,7 +8,3 @@ import { Component } from "@angular/core";
 export class MBCLContainerComponent {
 
 }
-
-export function instantiateMBCLContainerComponent() {
-    return MBCLContainerComponent;
-}

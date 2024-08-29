@@ -8,7 +8,3 @@ import { Component } from "@angular/core";
 export class DTCLContainerComponent {
 
 }
-
-export function instantiateDTCLContainerComponent() {
-    return DTCLContainerComponent;
-}
