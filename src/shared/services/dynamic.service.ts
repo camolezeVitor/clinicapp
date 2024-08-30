@@ -8,10 +8,10 @@ import { BehaviorSubject, Observable } from "rxjs";
 export class DynamicComponentCreationService {
 
     private getImplementationType(handler: DynamicHandlerProtocol<any> | BehaviorSubject<any>): "BS" | "DH" {
-        return ((handler as DynamicHandlerProtocol<any>).templateSubject$ !== undefined) ? "DH" : "BS";
+        return ((handler as BehaviorSubject<any>).getValue === undefined) ? "DH" : "BS";
     }
  
-    observeHander(handler: DynamicHandlerProtocol<any> | BehaviorSubject<any>): Observable<any> {
+    observeHandler(handler: DynamicHandlerProtocol<any> | BehaviorSubject<any>): Observable<any> {
 
         if (this.getImplementationType(handler) == "BS") {
             return (handler as BehaviorSubject<any>).asObservable();
@@ -20,6 +20,5 @@ export class DynamicComponentCreationService {
         const handlerImpl = inject(handler as any as HostAttributeToken) as any as DynamicHandlerProtocol<any>;
         
         return handlerImpl.templateSubject$.asObservable();
-        
     } 
 }

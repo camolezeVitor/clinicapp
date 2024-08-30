@@ -1,4 +1,1 @@
-export enum ScreenState {
-    MOBILE = "mobile",
-    DESKTOP = "desktop"
-}
+export type ScreenState = "MOBILE" | "DESKTOP";

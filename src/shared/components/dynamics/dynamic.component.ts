@@ -8,7 +8,7 @@ import { DynamicStorager } from "./dynamic-storager";
 
 type DynamicComponentConfig<T> = {
     templates: Array<Template<T>>,
-    handler: DynamicHandlerProtocol<T> | BehaviorSubject<T>,
+    handler: DynamicHandlerProtocol<T> | BehaviorSubject<T> | any,
     defaultComponent?: Type<any>,
     loadingComponent?: Type<any>
 }
@@ -26,7 +26,7 @@ export abstract class DynamicComponent<T> implements DynamicComponentProtocol {
 
         this.dynamicStorager__ = new DynamicStorager<T>(config.templates)
 
-        this.dynamicService__.observeHander(config.handler).subscribe(state => {
+        this.dynamicService__.observeHandler(config.handler).subscribe(state => {
             this.setComponent(state);
         });
     }
