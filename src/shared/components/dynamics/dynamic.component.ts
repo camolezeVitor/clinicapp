@@ -1,7 +1,7 @@
 import { inject, NgZone, Type } from "@angular/core";
 import { DynamicComponentProtocol, DynamicHandlerProtocol } from "@mapping/protocols";
 import { Template } from "@mapping/types";
-import { DynamicComponentCreationService } from "@services";
+import { DynamicComponentObservationService } from "@services";
 import { BehaviorSubject } from "rxjs";
 import { DynamicStorager } from "./dynamic-storager";
 
@@ -96,7 +96,7 @@ export abstract class DynamicComponent<T> implements DynamicComponentProtocol {
     dynamicComponent__: Type<any> | undefined;
 
     //Serviço para a validação e criação de componentes
-    dynamicService__: DynamicComponentCreationService = inject(DynamicComponentCreationService);
+    dynamicService__: DynamicComponentObservationService = inject(DynamicComponentObservationService);
     ngZone: NgZone = inject(NgZone);
 
     constructor(config: DynamicComponentConfig<T>) {

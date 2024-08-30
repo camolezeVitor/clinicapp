@@ -1,9 +1,9 @@
 import { NgZone, Type } from "@angular/core";
-import { DynamicComponentCreationService } from "@services";
+import { DynamicComponentObservationService } from "@services";
 
 export interface DynamicComponentProtocol {
     dynamicComponent__: Type<any> | Function | null | undefined;
-    dynamicService__: DynamicComponentCreationService;
+    dynamicService__: DynamicComponentObservationService;
     ngZone: NgZone;
     clearComponent(): void;
 }
