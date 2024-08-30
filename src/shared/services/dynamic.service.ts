@@ -1,4 +1,5 @@
-import { Injectable, Type } from "@angular/core";
+import { HostAttributeToken, inject, Injectable, Type } from "@angular/core";
+import { DynamicHandlerProtocol } from "@mapping/protocols";
 import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable({
@@ -6,22 +7,19 @@ import { BehaviorSubject, Observable } from "rxjs";
 })
 export class DynamicComponentCreationService {
 
-    /**
-     * @author camolezeVitor_ 
-     * @description
-     * Método utilizado para validar se o componente implementa a interface
-     * DynamicComponentProtocol e também utiliza o decorator @Dynamic.
-     * @param component 
-     */
-    private validateImplementation(component: Type<any> | any | unknown) {
-
-        //TEM QUE FAZER A VALIDAÇÃO FUTURAMENTE
-
+    private getImplementationType(handler: DynamicHandlerProtocol<any> | BehaviorSubject<any>): "BS" | "DH" {
+        return ((handler as DynamicHandlerProtocol<any>).templateSubject$ !== undefined) ? "DH" : "BS";
     }
+ 
+    observeHander(handler: DynamicHandlerProtocol<any> | BehaviorSubject<any>): Observable<any> {
 
-    observeChanges(component: Type<any> | any | unknown): Observable<any> {
-        this.validateImplementation(component);
-        const handler = component.constructor.prototype.dynamicHandler;
-        return (handler.templateSubject$ as BehaviorSubject<any>).asObservable();
-    }
+        if (this.getImplementationType(handler) == "BS") {
+            return (handler as BehaviorSubject<any>).asObservable();
+        }
+
+        const handlerImpl = inject(handler as any as HostAttributeToken) as any as DynamicHandlerProtocol<any>;
+        
+        return handlerImpl.templateSubject$.asObservable();
+        
+    } 
 }
