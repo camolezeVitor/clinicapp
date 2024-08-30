@@ -26,6 +26,9 @@
     "baseUrl": ".",
     "paths": {
 
+      //ROUTES
+      "@routes": ["./src/routes"],
+
       //MAPEAMENTO DE DADOS
       "@mapping/core": ["./src/shared/mapping/core"],
       "@mapping/dtos": ["./src/shared/mapping/dtos"],

@@ -1,0 +1,1 @@
+export { CLRegistrarUsuarioModule } from "./registrar-usuario/registrar-usuario.module";
