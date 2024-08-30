@@ -1,0 +1,1 @@
+export { SCREEN_CONFIG } from "./screen.config";

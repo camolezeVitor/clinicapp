@@ -52,7 +52,10 @@
       "@enums/states": ["./src/shared/enums/states"],
 
       //DECORATORS
-      "@decorators": ["./src/shared/decorators"]
+      "@decorators": ["./src/shared/decorators"],
+
+      //CONFIGS
+      "@configs": ["./configs"]
     }
   },
   "angularCompilerOptions": {

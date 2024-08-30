@@ -15,11 +15,7 @@ export class DynamicComponentCreationService {
      */
     private validateImplementation(component: Type<any> | any | unknown) {
 
-        if (component.dynamicComponent__ == undefined || component.dynamicService__ == undefined) 
-            throw Error("Protocolo dinâmico não implementado!");
-
-        if (component.constructor.prototype.dynamicHandler == undefined) 
-            throw Error("Decorator @Dynamic não implementado!");
+        //TEM QUE FAZER A VALIDAÇÃO FUTURAMENTE
 
     }
 
