@@ -14,6 +14,7 @@ export class ScreenService implements DynamicHandlerProtocol<ScreenState> {
 
     constructor() {
         if (typeof window !== 'undefined') {
+            this.initialEmmit();
             this.validateChangeAndEmitOutput();
         }
     }
@@ -23,6 +24,10 @@ export class ScreenService implements DynamicHandlerProtocol<ScreenState> {
             this.checkIfThereIsNeedForChangingThenEmmitChange(this.getScreenType())
         )
     };
+
+    initialEmmit() {
+        this.checkIfThereIsNeedForChangingThenEmmitChange(this.getScreenType());
+    }
 
     private checkIfThereIsNeedForChangingThenEmmitChange(state: ScreenState) {
         if (this.actualValidationValue != state) {
