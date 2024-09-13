@@ -40,6 +40,9 @@
 
       //COMPONENTES
       "@components": ["./src/shared/components"],
+
+      //DIRECTIVES
+      "@directives": ["./src/shared/directives"],
       
       //CONSTANTS
       "@constants": ["./src/shared/constants"],

@@ -39,4 +39,5 @@ export class ScreenService implements DynamicHandlerProtocol<ScreenState> {
     private getScreenType(): ScreenState {
         return window.innerWidth > SCREEN_CONFIG.mobileWidth ? "DESKTOP" : "MOBILE";
     }
+    
 }

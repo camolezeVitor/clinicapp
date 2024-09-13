@@ -1,7 +1,7 @@
 export interface RegistrarUsuarioProtocol {
 
-    enviarFormularioDeCadastro: () => unknown;
+    enviarFormularioDeCadastro: (form?: string) => unknown;
     
-    validarFormularioDeCadastro: () => unknown;
+    validarFormularioDeCadastro: (form?: string) => unknown;
 
 }

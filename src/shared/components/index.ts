@@ -1,1 +1,0 @@
-export { DynamicComponent } from "./dynamics/dynamic.component";

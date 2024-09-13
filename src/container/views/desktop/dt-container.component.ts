@@ -5,6 +5,4 @@ import { Component } from "@angular/core";
     templateUrl: "./dt-container.component.html",
     styleUrl: "./dt-container.component.css"
 })
-export class DTCLContainerComponent {
-
-}
+export class DTCLContainerComponent {}

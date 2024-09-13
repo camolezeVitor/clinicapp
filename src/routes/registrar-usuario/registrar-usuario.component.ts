@@ -1,35 +1,43 @@
-import { Component, } from "@angular/core";
+import { Component, ViewChild, ViewContainerRef } from "@angular/core";
 import { RegistrarUsuarioProtocol } from "./registrar-usuario.protocol";
-import { DynamicComponent } from "@components";
 import { ScreenState } from "@enums/states";
 import { ScreenService } from "src/shared/services/screen.service";
-import { Template } from "@mapping/types";
 import { DTCLRegistrarUsuarioComponent } from "./views/desktop/dt-registrar-usuario.component";
 import { MBCLRegistrarUsuarioComponent } from "./views/mobile/mb-registrar-usuario.component";
-import { DynamicTemplate } from "@constants";
+import { DynamicComponentConfig, DynamicFather } from "src/shared/mapping/protocols/dynamic.protocol";
 
-const CLRegistrarUsuariosTemplates: Array<Template<ScreenState>> = [
-    { component: DTCLRegistrarUsuarioComponent, condition: "DESKTOP" },
-    { component: MBCLRegistrarUsuarioComponent, condition: "MOBILE" },
-]
+const CLRegistrarUsuariosConfig: DynamicComponentConfig<ScreenState> = {
+    handler: ScreenService,
+    templates: [
+        { component: DTCLRegistrarUsuarioComponent, condition: "DESKTOP" },
+        { component: MBCLRegistrarUsuarioComponent, condition: "MOBILE" },
+    ],
+}
 
 @Component({
     selector: "cl-registrar-usuario-component",
-    template: DynamicTemplate
+    template: `
+    <ng-template [Dynamic]="config"
+        [outputs]="{
+            handle$enviarFormularioDeCadastro: enviarFormularioDeCadastro,
+            handle$validarFormularioDeCadastro: validarFormularioDeCadastro
+        }"
+    />
+    `
 })
-export class CLRegistrarUsuarioComponent extends DynamicComponent<ScreenState>
-    implements RegistrarUsuarioProtocol {
-        
+export class CLRegistrarUsuarioComponent implements RegistrarUsuarioProtocol, DynamicFather<ScreenState> {
+    config = CLRegistrarUsuariosConfig;
+    valor: string = "Alguma coisa aleatória";
+
     constructor() {
-        super({
-            handler: ScreenService,
-            templates: CLRegistrarUsuariosTemplates
-        })
+        setTimeout(() => {
+            
+        }, 5000);
     }
 
-    enviarFormularioDeCadastro() {
+    enviarFormularioDeCadastro(form?: string) {
+        console.log(form);
     };
 
-    validarFormularioDeCadastro(){
-    };
+    validarFormularioDeCadastro(){};
 }

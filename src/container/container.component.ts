@@ -1,28 +1,24 @@
 import { Component } from "@angular/core";
-import { DynamicComponent } from "@components";
 import { ScreenState } from "@enums/states";
-import { ScreenService } from "src/shared/services/screen.service";
 import { DTCLContainerComponent } from "./views/desktop/dt-container.component";
 import { MBCLContainerComponent } from "./views/mobile/mb-container.component";
-import { DynamicTemplate } from "@constants";
-import { Template } from "@mapping/types";
+import { DynamicComponentConfig } from "src/shared/mapping/protocols/dynamic.protocol";
+import { ScreenService } from "src/shared/services/screen.service";
 
-const ContainerTemplates: Array<Template<ScreenState>> = [
-  {component: DTCLContainerComponent, condition: "DESKTOP"},
-  {component: MBCLContainerComponent, condition: "MOBILE"},
-]
+const ContainerConfig: DynamicComponentConfig<ScreenState> = {
+  handler: ScreenService,
+  templates: [
+    {component: DTCLContainerComponent, condition: "DESKTOP"},
+    {component: MBCLContainerComponent, condition: "MOBILE"},
+  ]
+};
 
 @Component({
   selector: "cl-container",
-  template: DynamicTemplate
+  template: `
+    <ng-template [Dynamic]="config"/>
+  `,
 })
-export class CLContainerComponent extends DynamicComponent<ScreenState> {
-
-  constructor() {
-    super({
-      handler: ScreenService,
-      templates: ContainerTemplates,
-    });
-  };
-
+export class CLContainerComponent {
+  config = ContainerConfig;
 }

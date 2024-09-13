@@ -14,6 +14,10 @@
  */
 export const DynamicTemplate = `
     @if(dynamicComponent__){
-        <ng-component-outlet [ngComponentOutlet]="dynamicComponent__"/>
+        @if(data) {
+            <ng-container *ngComponentOutlet="dynamicComponent__; inputs: data"/>
+        } @else {
+            <ng-container *ngComponentOutlet="dynamicComponent__"/>
+        }
     }
 `;

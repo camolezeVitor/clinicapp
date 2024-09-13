@@ -4,11 +4,13 @@ import { RouterModule } from "@angular/router";
 import { DTCLRegistrarUsuarioComponent } from "./views/desktop/dt-registrar-usuario.component";
 import { MBCLRegistrarUsuarioComponent } from "./views/mobile/mb-registrar-usuario.component";
 import { CommonModule } from "@angular/common";
+import { Dynamic } from "@directives";
 
 @NgModule({
     imports: [
         RouterModule.forChild([{path:"", component: CLRegistrarUsuarioComponent}]),
-        CommonModule
+        CommonModule,
+        Dynamic
     ],
     declarations: [
         CLRegistrarUsuarioComponent,

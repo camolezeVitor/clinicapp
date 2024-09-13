@@ -5,6 +5,4 @@ import { Component } from "@angular/core";
     templateUrl: "./mb-container.component.html",
     styleUrl: "./mb-container.component.css"
 })
-export class MBCLContainerComponent {
-
-}
+export class MBCLContainerComponent {}
