@@ -6,7 +6,7 @@ import { catchError, from, Observable, take, throwError, timeout } from "rxjs";
 import { TokenState } from "src/shared/enums/states/token-state";
 import { UserFuncionarioService } from "src/shared/services/user-funcionario.service";
 import { UserFuncionarioState } from "src/shared/enums/states/user-funcionario-state";
-import { AuthInterceptionAction } from "src/shared/enums/actions/auth-interception.actionst";
+import { AuthInterceptionAction } from "src/shared/enums/actions/auth-interception.actions";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -18,21 +18,21 @@ export class AuthInterceptor implements HttpInterceptor {
 
         //Caso o usuário que estiver tentando fazer a conexão estiver com o token inválido
         //vai apitar um erro e desconectar o usuário.
-        if (usuarioState == UserFuncionarioState.LOGADO && tokenState == TokenState.INVALIDADA) {
+        if (usuarioState == "LOGGED" && tokenState == "INVALID") {
             this.usarioFuncionarioService.disconectFuncionarioLogado();
-            return AuthInterceptionAction.ERR;
+            return "ERROR";
         }
 
         //Caso o usuário estiver tentando fazer login, vai dar sucesso pois não há nenhuma razão 
         //para bloquear ele de fazer uma requisição, daí vai para o backend tratar!
         //---
         //Caso estiver tudo certo também.
-        return AuthInterceptionAction.SUCCESS;
+        return "SUCCESS";
     }
 
     private executeAuthAction(action: AuthInterceptionAction, req: HttpRequest<any>, next: HttpHandler) {
         //Não existe problema!
-        if (action == AuthInterceptionAction.SUCCESS) {
+        if (action == "SUCCESS") {
             return next.handle(req);
         }
 
@@ -55,7 +55,7 @@ export class AuthInterceptor implements HttpInterceptor {
         const usuarioState = this.usarioFuncionarioService.getFuncionarioState();
 
         const tokenState$ = from(this.tokenService.verifyTokenState());
-        let acaoTomada: AuthInterceptionAction = AuthInterceptionAction.ERR;
+        let acaoTomada: AuthInterceptionAction = "ERROR";
 
         tokenState$.pipe(take(1)).subscribe(state => {
             acaoTomada = this.handleAuthAction(state, usuarioState);

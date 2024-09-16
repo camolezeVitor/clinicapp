@@ -1,5 +1,5 @@
 import { ServicoDTO } from "@mapping/dtos";
-import { ServicoImpl } from "@mapping/models";
+import { ServicoImpl } from "src/shared/mapping/entities";
 
 export class ServicoAdapter {
     public static fromDtoToAdapter(servicoDto: ServicoDTO): ServicoImpl {

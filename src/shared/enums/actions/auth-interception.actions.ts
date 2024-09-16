@@ -1,4 +1,1 @@
-export enum AuthInterceptionAction {
-    ERR = "error",
-    SUCCESS = "success"
-}
+export type AuthInterceptionAction = "ERROR" | "SUCCESS";

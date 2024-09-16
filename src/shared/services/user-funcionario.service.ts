@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { FuncionarioImpl } from "@mapping/models";
+import { FuncionarioImpl } from "src/shared/mapping/entities";
 import { UserFuncionarioState } from "../enums/states/user-funcionario-state";
 
 /**
@@ -14,7 +14,7 @@ import { UserFuncionarioState } from "../enums/states/user-funcionario-state";
 export class UserFuncionarioService {
     
     private usuarioFuncionarioLogado: FuncionarioImpl | null = null;
-    private usuarioFuncionarioState: UserFuncionarioState = UserFuncionarioState.NAO_LOGADO;
+    private usuarioFuncionarioState: UserFuncionarioState = "NOT_LOGGED";
     public desconexaoWarn: boolean = false;
     
     constructor() {};

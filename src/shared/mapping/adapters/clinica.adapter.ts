@@ -1,4 +1,4 @@
-import { ClinicaImpl } from "@mapping/models";
+import { ClinicaImpl } from "src/shared/mapping/entities";
 import { ClinicaDTO } from "@mapping/dtos";
 
 export class ClinicaAdapter {

@@ -1,8 +1,8 @@
 import { PacienteDTO } from "@mapping/dtos";
-import { ContaCorrenteImpl } from "@mapping/models";
-import { DoencaImpl } from "@mapping/models";
-import { PessoaImpl } from "@mapping/models";
-import { ProntuarioImpl } from "@mapping/models";
+import { ContaCorrenteImpl } from "src/shared/mapping/entities";
+import { DoencaImpl } from "src/shared/mapping/entities";
+import { PessoaImpl } from "src/shared/mapping/entities";
+import { ProntuarioImpl } from "src/shared/mapping/entities";
 
 
 export class PacienteImpl {

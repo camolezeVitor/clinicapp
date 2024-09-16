@@ -1,7 +1,7 @@
 import { Funcionario } from "@mapping/core";
 import { FuncionarioDTO } from "@mapping/dtos";
-import { PessoaImpl } from "@mapping/models";
-import { UsuarioImpl } from "@mapping/models";
+import { PessoaImpl } from "src/shared/mapping/entities";
+import { UsuarioImpl } from "src/shared/mapping/entities";
 
 export class FuncionarioImpl implements Funcionario {
     

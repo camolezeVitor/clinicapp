@@ -1,5 +1,5 @@
 import { ProntuarioDTO } from "@mapping/dtos";
-import { ProntuarioImpl } from "@mapping/models";
+import { ProntuarioImpl } from "src/shared/mapping/entities";
 
 export class ProntuarioAdapter {
     public static fromDtoToModel(prontuarioDto: ProntuarioDTO): ProntuarioImpl {

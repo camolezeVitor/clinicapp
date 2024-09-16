@@ -1,8 +1,8 @@
 import { Consulta } from "@mapping/core";
 import { ConsultaDTO } from "@mapping/dtos";
-import { FuncionarioImpl } from "@mapping/models";
-import { PacienteImpl } from "@mapping/models";
-import { ServicoImpl } from "@mapping/models";
+import { FuncionarioImpl } from "src/shared/mapping/entities";
+import { PacienteImpl } from "src/shared/mapping/entities";
+import { ServicoImpl } from "src/shared/mapping/entities";
 
 export class ConsultaImpl implements Consulta {
 

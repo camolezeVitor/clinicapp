@@ -1,6 +1,6 @@
 import { Usuario } from "@mapping/core";
 import { UsuarioDTO } from "@mapping/dtos";
-import { ConfiguracoesDoUsuarioImpl } from "@mapping/models";
+import { ConfiguracoesDoUsuarioImpl } from "src/shared/mapping/entities";
 
 export class UsuarioImpl implements Usuario {
     

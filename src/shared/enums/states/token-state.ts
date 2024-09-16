@@ -1,5 +1,1 @@
-export enum TokenState {
-    NAO_ARMAZENADA = "tokenNotStored",
-    VALIDA = "tokenIsValid",
-    INVALIDADA = "tokenIsInvalid"
-}
+export type TokenState = "NOT_STORED" | "VALID" | "INVALID"

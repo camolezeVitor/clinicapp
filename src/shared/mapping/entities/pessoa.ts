@@ -1,6 +1,6 @@
 import { Pessoa } from "@mapping/core";
 import { PessoaDTO } from "@mapping/dtos";
-import { EnderecoImpl } from "@mapping/models";
+import { EnderecoImpl } from "src/shared/mapping/entities";
 
 export class PessoaImpl implements Pessoa {
     

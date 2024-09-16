@@ -1,7 +1,7 @@
 import { Clinica } from "@mapping/core";
 import { ClinicaDTO } from "@mapping/dtos";
-import { ContaImpl } from "@mapping/models";
-import { EnderecoImpl } from "@mapping/models";
+import { ContaImpl } from "src/shared/mapping/entities";
+import { EnderecoImpl } from "src/shared/mapping/entities";
 
 export class ClinicaImpl implements Clinica {
 

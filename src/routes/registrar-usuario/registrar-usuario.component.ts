@@ -1,4 +1,4 @@
-import { Component, ViewChild, ViewContainerRef } from "@angular/core";
+import { Component } from "@angular/core";
 import { RegistrarUsuarioProtocol } from "./registrar-usuario.protocol";
 import { ScreenState } from "@enums/states";
 import { ScreenService } from "src/shared/services/screen.service";
@@ -27,17 +27,13 @@ const CLRegistrarUsuariosConfig: DynamicComponentConfig<ScreenState> = {
 })
 export class CLRegistrarUsuarioComponent implements RegistrarUsuarioProtocol, DynamicFather<ScreenState> {
     config = CLRegistrarUsuariosConfig;
-    valor: string = "Alguma coisa aleatória";
 
-    constructor() {
-        setTimeout(() => {
-            
-        }, 5000);
-    }
+    constructor() {}
 
     enviarFormularioDeCadastro(form?: string) {
-        console.log(form);
     };
 
-    validarFormularioDeCadastro(){};
+    validarFormularioDeCadastro(form?: string) {
+        
+    };
 }

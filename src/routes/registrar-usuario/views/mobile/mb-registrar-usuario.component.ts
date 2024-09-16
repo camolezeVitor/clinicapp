@@ -12,8 +12,6 @@ export class MBCLRegistrarUsuarioComponent implements DynamicChild<RegistrarUsua
     @Output() handle$enviarFormularioDeCadastro: EventEmitter<any> = new EventEmitter<any>();
     @Output() handle$validarFormularioDeCadastro: EventEmitter<any> = new EventEmitter<any>();
     
-    @Input() teste: string = "não sei...";
-
     enviarFormularioDeCadastro() {
         this.handle$enviarFormularioDeCadastro.emit("Texto gerado pelo paulo romano");
     };

@@ -1,5 +1,5 @@
 import { PagamentoDTO } from "@mapping/dtos";
-import { PagamentoImpl } from "@mapping/models";
+import { PagamentoImpl } from "src/shared/mapping/entities";
 
 export class PagamentoAdapter {
     public static fromDtoToModel(pagamentoDto: PagamentoDTO): PagamentoImpl {

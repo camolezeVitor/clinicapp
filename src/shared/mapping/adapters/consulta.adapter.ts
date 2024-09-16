@@ -1,5 +1,5 @@
 import { ConsultaDTO } from "@mapping/dtos";
-import { ConsultaImpl } from "@mapping/models";
+import { ConsultaImpl } from "src/shared/mapping/entities";
 
 export class ConsultaAdapter {
     public static fromDtoToModel(consultaDto: ConsultaDTO): ConsultaImpl {

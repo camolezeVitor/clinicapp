@@ -1,25 +1,12 @@
 import { AfterViewInit, ComponentRef, Directive, EventEmitter, Inject, inject, Input, OnChanges, OnInit, PLATFORM_ID, SimpleChanges, Type, ViewContainerRef } from "@angular/core";
 import { DynamicComponentObservationService } from "@services";
-import { Subject, takeUntil } from "rxjs";
 import { DynamicComponentConfig } from "src/shared/mapping/protocols/dynamic.protocol";
 import { DynamicStorager } from "./dynamic.storager";
 import { DynamicValidation } from "./dynamic.validation";
 import { isPlatformBrowser } from "@angular/common";
 
-type ComponentInput = {
-    propName: string;
-    templateName: string;
-    transform?: (value: any) => any;
-    isSignal: boolean;
-};
-type ComponentOutput = {
-    propName: string;
-    templateName: string;
-}
 export type UserInputs = Object;
 export type UserOutputs = {[key: string]: Function};
-type ComponentInputs = Array<ComponentInput>;
-type ComponentOutputs = Array<ComponentOutput>;
 
 @Directive({
     selector: "[Dynamic]",

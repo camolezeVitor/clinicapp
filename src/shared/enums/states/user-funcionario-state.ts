@@ -1,5 +1,1 @@
-export enum UserFuncionarioState {
-    LOGADO = "userIsLogged",
-    NAO_LOGADO = "userIsNotLogged",
-    EM_PROCESSO_DE_LOGIN = "userIsLogging"
-}
+export type UserFuncionarioState = "LOGGED" | "NOT_LOGGED" | "IS_LOGGING";

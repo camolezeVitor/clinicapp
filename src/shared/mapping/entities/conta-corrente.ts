@@ -1,6 +1,6 @@
 import { ContaCorrente } from "@mapping/core";
 import { ContaCorrenteDTO } from "@mapping/dtos";
-import { PagamentoImpl } from "@mapping/models";
+import { PagamentoImpl } from "src/shared/mapping/entities";
 
 export class ContaCorrenteImpl implements ContaCorrente {
 

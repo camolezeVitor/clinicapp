@@ -1,5 +1,5 @@
 import { PessoaDTO } from "@mapping/dtos";
-import { PessoaImpl } from "@mapping/models";
+import { PessoaImpl } from "src/shared/mapping/entities";
 
 export class PessoaAdapter {
     public static fromDtoToModel(pessoaDto: PessoaDTO): PessoaImpl {
