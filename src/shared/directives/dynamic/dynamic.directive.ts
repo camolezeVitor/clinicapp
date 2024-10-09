@@ -75,8 +75,8 @@ export class Dynamic implements AfterViewInit, OnChanges {
     }
 
     private bindValues(componentRef: ComponentRef<any>) {
-        this.bindInputs(componentRef);
-        this.bindOutputs(componentRef);
+        if (this.inputs) this.bindInputs(componentRef);
+        if (this.outputs) this.bindOutputs(componentRef);
     }
 
     private bindInputs({instance}: ComponentRef<any>) {

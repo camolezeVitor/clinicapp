@@ -11,7 +11,7 @@ export class DTCLRegistrarUsuarioComponent implements DynamicChild<RegistrarUsua
 
     @Output() handle$enviarFormularioDeCadastro: EventEmitter<any> = new EventEmitter<any>();
     @Output() handle$validarFormularioDeCadastro: EventEmitter<any> = new EventEmitter<any>();
-
+    
     enviarFormularioDeCadastro() {
         this.handle$enviarFormularioDeCadastro.emit("Teste :)")
     };
