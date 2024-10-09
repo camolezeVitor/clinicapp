@@ -9,12 +9,12 @@ export type UserInputs = Object;
 export type UserOutputs = {[key: string]: Function};
 
 @Directive({
-    selector: "[Dynamic]",
+    selector: "[dynamic]",
     standalone: true
 })
-export class Dynamic implements AfterViewInit, OnChanges {
+export class DynamicDirective implements AfterViewInit, OnChanges {
        
-    @Input("Dynamic") config!: DynamicComponentConfig<any>;
+    @Input("dynamic") config!: DynamicComponentConfig<any>;
     @Input() inputs?: UserInputs;
     @Input() outputs?: UserOutputs;
 

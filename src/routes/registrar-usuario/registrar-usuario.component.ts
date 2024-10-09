@@ -17,8 +17,7 @@ const CLRegistrarUsuariosConfig: DynamicComponentConfig<ScreenState> = {
 @Component({
     selector: "cl-registrar-usuario-component",
     template: `
-    <button></button>
-    <ng-template [Dynamic]="config"
+    <ng-template [dynamic]="config"
         [outputs]="{
             handle$enviarFormularioDeCadastro: enviarFormularioDeCadastro,
             handle$validarFormularioDeCadastro: validarFormularioDeCadastro

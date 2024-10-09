@@ -16,7 +16,7 @@ const ContainerConfig: DynamicComponentConfig<ScreenState> = {
 @Component({
   selector: "cl-container",
   template: `
-    <ng-template [Dynamic]="config"/>
+    <ng-template [dynamic]="config"/>
   `,
 })
 export class CLContainerComponent {
