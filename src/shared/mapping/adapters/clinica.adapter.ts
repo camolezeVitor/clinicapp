@@ -1,8 +1,11 @@
 import { ClinicaImpl } from "src/shared/mapping/entities";
-import { ClinicaDTO } from "@mapping/dtos";
+import { ClinicaDTO, createClinicaDTOFromEntity } from "@mapping/dtos";
 
 export class ClinicaAdapter {
-    static fromDtoToEntity(clinicaDto: ClinicaDTO): ClinicaImpl {
+    public static fromDTOToEntity(clinicaDto: ClinicaDTO): ClinicaImpl {
         return new ClinicaImpl(clinicaDto);
+    }
+    public static fromEntityToDTO(clinicaEntity: ClinicaImpl): ClinicaDTO {
+        return createClinicaDTOFromEntity(clinicaEntity);
     }
 }

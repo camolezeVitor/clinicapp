@@ -1,8 +1,11 @@
-import { ProntuarioDTO } from "@mapping/dtos";
+import { createProntuarioDTOFromEntity, ProntuarioDTO } from "@mapping/dtos";
 import { ProntuarioImpl } from "src/shared/mapping/entities";
 
 export class ProntuarioAdapter {
-    public static fromDtoToEntity(prontuarioDto: ProntuarioDTO): ProntuarioImpl {
+    public static fromDTOToEntity(prontuarioDto: ProntuarioDTO): ProntuarioImpl {
         return new ProntuarioImpl(prontuarioDto);
     } 
+    public static fromEntityFromDTO(prontuarioEntity: ProntuarioImpl): ProntuarioDTO {
+        return createProntuarioDTOFromEntity(prontuarioEntity);
+    }
 }

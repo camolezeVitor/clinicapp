@@ -1,8 +1,11 @@
-import { ConfiguracoesDoUsuarioDTO } from "@mapping/dtos";
+import { ConfiguracoesDoUsuarioDTO, createConfiguracoesDoUsuarioDTOFromEntity } from "@mapping/dtos";
 import { ConfiguracoesDoUsuarioImpl } from "src/shared/mapping/entities";
 
 export class ConfiguracoesDoUsuarioAdapter {
-    static fromDtoToEntity(configuracoesDoUsuarioDto: ConfiguracoesDoUsuarioDTO): ConfiguracoesDoUsuarioImpl {
+    public static fromDTOToEntity(configuracoesDoUsuarioDto: ConfiguracoesDoUsuarioDTO): ConfiguracoesDoUsuarioImpl {
         return new ConfiguracoesDoUsuarioImpl(configuracoesDoUsuarioDto);
+    }
+    public static fromEntityToDTO(configuracoesDoUsuarioEntity: ConfiguracoesDoUsuarioImpl): ConfiguracoesDoUsuarioDTO {
+        return createConfiguracoesDoUsuarioDTOFromEntity(configuracoesDoUsuarioEntity);
     }
 }

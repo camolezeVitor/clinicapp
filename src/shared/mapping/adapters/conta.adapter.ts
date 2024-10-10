@@ -1,8 +1,11 @@
-import { ContaDTO } from "@mapping/dtos";
+import { ContaDTO, createContaDTOFromEntity } from "@mapping/dtos";
 import { ContaImpl } from "src/shared/mapping/entities";
 
 export class ContaAdapter {
-    public static fromDtoToEntity(contaDto: ContaDTO): ContaImpl {
+    public static fromDTOToEntity(contaDto: ContaDTO): ContaImpl {
         return new ContaImpl(contaDto);
+    }
+    public static fromEntityToDTO(contaEntity: ContaImpl): ContaDTO {
+        return createContaDTOFromEntity(contaEntity);
     }
 }

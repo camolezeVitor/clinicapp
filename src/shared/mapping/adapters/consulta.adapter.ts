@@ -1,8 +1,11 @@
-import { ConsultaDTO } from "@mapping/dtos";
+import { ConsultaDTO, createConsultaDTOFromEntity } from "@mapping/dtos";
 import { ConsultaImpl } from "src/shared/mapping/entities";
 
 export class ConsultaAdapter {
-    public static fromDtoToEntity(consultaDto: ConsultaDTO): ConsultaImpl {
+    public static fromDTOToEntity(consultaDto: ConsultaDTO): ConsultaImpl {
         return new ConsultaImpl(consultaDto);
+    }
+    public static fromEntityToDTO(consultaEntity: ConsultaImpl): ConsultaDTO {
+        return createConsultaDTOFromEntity(consultaEntity);
     }
 }
