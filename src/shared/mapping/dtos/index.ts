@@ -12,3 +12,19 @@ export { PessoaDTO } from "./pessoa";
 export { ProntuarioDTO } from "./prontuario";
 export { ServicoDTO } from "./servico";
 export { UsuarioDTO } from "./usuario";
+
+//Factories
+export { createClinicaDTOFromEntity} from "./clinica";
+export { createConfiguracoesDoUsuarioDTOFromEntity } from "./configs-usuario";
+export { createConsultaDTOFromEntity } from "./consulta";
+export { createContaCorrenteDTOFromEntity } from "./conta-corrente";
+export { createContaDTOFromEntity } from "./conta";
+export { createDoencaDTOFromEntity } from "./doenca";
+export { createEnderecoDTOFromEntity } from "./endereco";
+export { createFuncionarioDTOFromEntity } from "./funcionario";
+export { createPacienteDTOFromEntity } from "./paciente";
+export { createPagamentoDTOFromEntity } from "./pagamento";
+export { createPessoaDTOFromEntity } from "./pessoa";
+export { createProntuarioDTOFromEntity } from "./prontuario";
+export { createServicoDTOFromEntity } from "./servico";
+export { createUsuarioDTOFromEntity } from "./usuario";
