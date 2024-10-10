@@ -28,12 +28,10 @@ const CLRegistrarUsuariosConfig: DynamicComponentConfig<ScreenState> = {
 export class CLRegistrarUsuarioComponent implements RegistrarUsuarioProtocol, DynamicFather<ScreenState> {
     config = CLRegistrarUsuariosConfig;
 
-    public valorSpread?: Partial<HTMLButtonElement>;
-
     constructor() {}
 
     enviarFormularioDeCadastro(form?: string) {
-        console.log(form);
+        
     };
 
     validarFormularioDeCadastro(form?: string) {
