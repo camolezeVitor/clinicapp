@@ -34,26 +34,23 @@
       "@mapping/dtos": ["./src/shared/mapping/dtos"],
       "@mapping/entities": ["src/shared/mapping/entities"],
       "@mapping/adapters": ["./src/shared/mapping/adapters"],
-      "@mapping/dependencies": ["src/shared/utils/dependencies"],
-      "@mapping/protocols": ["src/shared/utils/models/protocols"],
-      "@mapping/types": ["src/shared/utils/models/types"],
-
-      //COMPONENTES
-      "@components": ["./src/shared/components"],
-
-      //DIRECTIVES
-      "@directives": ["./src/shared/directives"],
-
+      
       //PRIVATE :|
       "@private": ["./private"],
-
+      
       //UTILITÁRIOS
-      // "@security": ["./src/shared/security"],
-      "@services": ["./src/shared/services"],
-
+      "@utils/services": ["./src/shared/utils/services"],
+      "@utils/directives": ["./src/shared/utils/directives"],
+      "@utils/components": ["./src/shared/utils/components"],
+      "@utils/dependencies": ["src/shared/utils/dependencies"],
+      "@utils/protocols": ["src/shared/utils/models/protocols"],
+      "@utils/types": ["src/shared/utils/models/types"],
+      
+      //SERVICES
+      "@services": ["src/shared/services"],
+    
       //ENUMS
-      "@enums/actions": ["./src/shared/enums/actions"],
-      "@enums/states": ["src/shared/utils/models/enums"],
+      "@enums": ["src/shared/enums"],
 
       //CONFIGS
       "@configs": ["./configs"]
