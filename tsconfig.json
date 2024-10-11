@@ -1,5 +1,3 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -25,35 +23,159 @@
     ],
     "baseUrl": ".",
     "paths": {
-
-      //ROUTES
-      "@routes": ["./src/routes"],
-
-      //MAPEAMENTO DE DADOS
-      "@mapping/core": ["./src/shared/mapping/core"],
-      "@mapping/dtos": ["./src/shared/mapping/dtos"],
-      "@mapping/entities": ["src/shared/mapping/entities"],
-      "@mapping/adapters": ["./src/shared/mapping/adapters"],
-      
-      //PRIVATE :|
-      "@private": ["./private"],
-      
-      //UTILITÁRIOS
-      "@utils/services": ["./src/shared/utils/services"],
-      "@utils/directives": ["./src/shared/utils/directives"],
-      "@utils/components": ["./src/shared/utils/components"],
-      "@utils/dependencies": ["src/shared/utils/dependencies"],
-      "@utils/protocols": ["src/shared/utils/models/protocols"],
-      "@utils/types": ["src/shared/utils/models/types"],
-      
-      //SERVICES
-      "@services": ["src/shared/services"],
-    
-      //ENUMS
-      "@enums": ["src/shared/enums"],
-
-      //CONFIGS
-      "@configs": ["./configs"]
+      "@routes": [
+        "./src/routes"
+      ],
+      "@mapping/core": [
+        "./src/shared/mapping/core"
+      ],
+      "@mapping/dtos": [
+        "./src/shared/mapping/dtos"
+      ],
+      "@mapping/entities": [
+        "src/shared/mapping/entities"
+      ],
+      "@mapping/adapters": [
+        "./src/shared/mapping/adapters"
+      ],
+      "@private": [
+        "./private"
+      ],
+      "@utils/services": [
+        "./src/shared/utils/services"
+      ],
+      "@utils/directives": [
+        "./src/shared/utils/directives"
+      ],
+      "@utils/components": [
+        "./src/shared/utils/components"
+      ],
+      "@utils/dependencies": [
+        "src/shared/utils/dependencies"
+      ],
+      "@utils/protocols": [
+        "src/shared/utils/models/protocols"
+      ],
+      "@utils/types": [
+        "src/shared/utils/models/types"
+      ],
+      "@services": [
+        "src/shared/services"
+      ],
+      "@enums": [
+        "src/shared/enums"
+      ],
+      "@configs": [
+        "./configs"
+      ],
+      "@spartan-ng/ui-accordion-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-accordion-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-alert-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-alert-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-alertdialog-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-alertdialog-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-aspectratio-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-aspectratio-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-avatar-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-avatar-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-badge-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-badge-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-button-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-button-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-card-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-card-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-carousel-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-carousel-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-checkbox-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-checkbox-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-command-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-command-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-dialog-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-dialog-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-formfield-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-formfield-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-hovercard-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-hovercard-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-icon-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-icon-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-input-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-input-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-label-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-label-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-menu-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-menu-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-pagination-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-pagination-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-popover-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-popover-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-progress-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-progress-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-radiogroup-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-radiogroup-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-scrollarea-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-scrollarea-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-select-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-select-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-separator-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-separator-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-sheet-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-sheet-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-skeleton-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-skeleton-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-slider-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-slider-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-sonner-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-sonner-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-spinner-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-spinner-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-switch-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-switch-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-table-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-table-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-tabs-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-tabs-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-toggle-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-toggle-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-tooltip-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-tooltip-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-typography-helm": [
+        ".\\src/shared/utils/components/spartan-ui/ui-typography-helm/src/index.ts"
+      ]
     }
   },
   "angularCompilerOptions": {
