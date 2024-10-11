@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "register",
-    loadChildren: () => import("@routes").then(mod => mod.CLRegistrarUsuarioModule)
+    path: "login",
+    loadChildren: () => import("@routes").then(mod => mod.LoginViewModule)
   }
 ];
 

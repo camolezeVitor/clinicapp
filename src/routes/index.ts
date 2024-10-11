@@ -1,1 +1,1 @@
-export { CLRegistrarUsuarioModule } from "./registrar-usuario/registrar-usuario.module";
+export { LoginViewModule } from "./route-login/login.module"

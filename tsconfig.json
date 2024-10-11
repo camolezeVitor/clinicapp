@@ -56,6 +56,9 @@
       "@utils/protocols": [
         "src/shared/utils/models/protocols"
       ],
+      "@utils/enums": [
+        "src/shared/utils/models/enums"
+      ],
       "@utils/types": [
         "src/shared/utils/models/types"
       ],
