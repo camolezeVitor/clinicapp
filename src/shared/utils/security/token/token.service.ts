@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { JwtToken } from "@mapping/dependencies";
+import { JwtToken } from "src/shared/utils/dependencies";
 import { JwtTokenImpl } from "private/security/token-manager";
-import { TokenState } from "src/shared/enums/states/token-state";
+import { TokenState } from "src/shared/utils/models/enums/token-state";
 
 /**
  * @author camolezeVitor

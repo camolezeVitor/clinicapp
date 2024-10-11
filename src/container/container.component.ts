@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-import { ScreenState } from "@enums/states";
+import { ScreenState } from "src/shared/utils/models/enums";
 import { DTCLContainerComponent } from "./views/desktop/dt-container.component";
 import { MBCLContainerComponent } from "./views/mobile/mb-container.component";
-import { DynamicComponentConfig } from "src/shared/mapping/protocols/dynamic.protocol";
-import { ScreenService } from "src/shared/services/screen.service";
+import { DynamicComponentConfig } from "src/shared/utils/models/protocols/dynamic.protocol";
+import { ScreenService } from "src/shared/utils/services/screen.service";
 
 const ContainerConfig: DynamicComponentConfig<ScreenState> = {
   handler: ScreenService,

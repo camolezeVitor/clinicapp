@@ -1,5 +1,5 @@
 import { Injectable, Injector } from "@angular/core";
-import { DynamicHandlerProtocol } from "@mapping/protocols";
+import { DynamicHandlerProtocol } from "src/shared/utils/models/protocols";
 import { BehaviorSubject, Observable } from "rxjs";
 
 /**

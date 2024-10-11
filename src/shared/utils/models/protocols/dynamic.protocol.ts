@@ -1,7 +1,7 @@
 import { Injectable, NgZone, Type } from "@angular/core";
 import { DynamicComponentObservationService } from "@services";
 import { DynamicHandlerProtocol } from "./dynamic-handler.protocol";
-import { Template } from "@mapping/types";
+import { Template } from "src/shared/utils/models/types";
 import { BehaviorSubject } from "rxjs";
 
 export interface DynamicComponentProtocol {

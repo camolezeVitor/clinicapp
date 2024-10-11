@@ -1,5 +1,5 @@
 import { Type } from "@angular/core";
-import { Template } from "@mapping/types";
+import { Template } from "src/shared/utils/models/types";
 
 //Classe responsável por armazenar os componentes dinâmicos dentro da diretiva
 export class DynamicStorager<T> {

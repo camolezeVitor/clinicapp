@@ -1,9 +1,9 @@
-import { AfterViewInit, ComponentRef, Directive, EventEmitter, Inject, inject, Input, OnChanges, OnInit, PLATFORM_ID, SimpleChanges, Type, ViewContainerRef } from "@angular/core";
-import { DynamicComponentObservationService } from "@services";
-import { DynamicComponentConfig } from "src/shared/mapping/protocols/dynamic.protocol";
+import { AfterViewInit, ComponentRef, Directive, EventEmitter, Inject, inject, Input, OnChanges, PLATFORM_ID, SimpleChanges, Type, ViewContainerRef } from "@angular/core";
+import { DynamicComponentConfig } from "src/shared/utils/models/protocols/dynamic.protocol";
 import { DynamicStorager } from "./dynamic.storager";
 import { DynamicValidation } from "./dynamic.validation";
 import { isPlatformBrowser } from "@angular/common";
+import { DynamicComponentObservationService } from "../../services";
 
 export type UserInputs = Object;
 export type UserOutputs = {[key: string]: Function};
@@ -36,7 +36,7 @@ export class DynamicDirective implements AfterViewInit, OnChanges {
         if (this.isBrowser) this.build();
     }
 
-    ngOnChanges(changes: SimpleChanges): void {
+    ngOnChanges(): void {
         if (this.selectedComponentRef) {
             this.bindValues(this.selectedComponentRef);
         }

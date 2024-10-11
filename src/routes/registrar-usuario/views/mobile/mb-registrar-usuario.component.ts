@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, output, OutputEmitterRef } from "@angular/core";
-import { DynamicChild } from "@mapping/types";
+import { DynamicChild } from "src/shared/utils/models/types";
 import { RegistrarUsuarioProtocol } from "../../registrar-usuario.protocol";
 
 @Component({

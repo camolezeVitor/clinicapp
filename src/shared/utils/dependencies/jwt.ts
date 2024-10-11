@@ -1,4 +1,4 @@
-import { TokenState } from "src/shared/enums/states/token-state";
+import { TokenState } from "src/shared/utils/models/enums/token-state";
 
 /**
  * Interface utilizada para padronizar outras classes que devem 

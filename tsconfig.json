@@ -34,9 +34,9 @@
       "@mapping/dtos": ["./src/shared/mapping/dtos"],
       "@mapping/entities": ["src/shared/mapping/entities"],
       "@mapping/adapters": ["./src/shared/mapping/adapters"],
-      "@mapping/dependencies": ["./src/shared/mapping/dependencies"],
-      "@mapping/protocols": ["./src/shared/mapping/protocols"],
-      "@mapping/types": ["./src/shared/mapping/types"],
+      "@mapping/dependencies": ["src/shared/utils/dependencies"],
+      "@mapping/protocols": ["src/shared/utils/models/protocols"],
+      "@mapping/types": ["src/shared/utils/models/types"],
 
       //COMPONENTES
       "@components": ["./src/shared/components"],
@@ -48,12 +48,12 @@
       "@private": ["./private"],
 
       //UTILITÁRIOS
-      "@security": ["./src/shared/security"],
+      // "@security": ["./src/shared/security"],
       "@services": ["./src/shared/services"],
 
       //ENUMS
       "@enums/actions": ["./src/shared/enums/actions"],
-      "@enums/states": ["./src/shared/enums/states"],
+      "@enums/states": ["src/shared/utils/models/enums"],
 
       //CONFIGS
       "@configs": ["./configs"]

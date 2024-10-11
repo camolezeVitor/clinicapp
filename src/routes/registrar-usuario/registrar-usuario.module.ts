@@ -4,7 +4,7 @@ import { RouterModule } from "@angular/router";
 import { DTCLRegistrarUsuarioComponent } from "./views/desktop/dt-registrar-usuario.component";
 import { MBCLRegistrarUsuarioComponent } from "./views/mobile/mb-registrar-usuario.component";
 import { CommonModule } from "@angular/common";
-import { DynamicDirective } from "@directives";
+import { DynamicDirective } from "src/shared/utils/directives";
 
 @NgModule({
     imports: [

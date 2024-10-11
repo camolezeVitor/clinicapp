@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { FuncionarioImpl } from "src/shared/mapping/entities";
-import { UserFuncionarioState } from "../enums/states/user-funcionario-state";
+import { UserFuncionarioState } from "../enums/user-logged.state";
 
 /**
  * @auhtor camolezeVitor_
@@ -11,7 +11,7 @@ import { UserFuncionarioState } from "../enums/states/user-funcionario-state";
 @Injectable({
     providedIn: "root",
 })
-export class UserFuncionarioService {
+export class UserLoggingService {
     
     private usuarioFuncionarioLogado: FuncionarioImpl | null = null;
     private usuarioFuncionarioState: UserFuncionarioState = "NOT_LOGGED";

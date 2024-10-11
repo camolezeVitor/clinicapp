@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { SCREEN_CONFIG } from "@configs";
-import { ScreenState } from "@enums/states";
-import { DynamicHandlerProtocol } from "@mapping/protocols";
+import { ScreenState } from "src/shared/utils/models/enums";
+import { DynamicHandlerProtocol } from "src/shared/utils/models/protocols";
 import { BehaviorSubject, fromEvent, Observable } from "rxjs";
 
 @Injectable({

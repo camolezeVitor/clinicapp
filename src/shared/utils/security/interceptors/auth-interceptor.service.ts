@@ -1,18 +1,18 @@
 import { Inject, Injectable } from "@angular/core";
-import { JwtToken } from "@mapping/dependencies";
+import { JwtToken } from "src/shared/utils/dependencies";
 import { TokenService } from "../token/token.service";
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { catchError, from, Observable, take, throwError, timeout } from "rxjs";
-import { TokenState } from "src/shared/enums/states/token-state";
-import { UserFuncionarioService } from "src/shared/services/user-funcionario.service";
-import { UserFuncionarioState } from "src/shared/enums/states/user-funcionario-state";
-import { AuthInterceptionAction } from "src/shared/enums/actions/auth-interception.actions";
+import { TokenState } from "src/shared/utils/models/enums/token-state";
+import { UserLoggingService } from "src/shared/services/user-logging.service";
+import { UserFuncionarioState } from "src/shared/enums/user-logged.state";
+import { AuthInterceptionAction } from "src/shared/utils/models/enums/auth-interception-state";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
     
     private tokenService: JwtToken = Inject(TokenService);
-    private usarioFuncionarioService: UserFuncionarioService = Inject(UserFuncionarioService);
+    private usarioFuncionarioService: UserLoggingService = Inject(UserLoggingService);
 
     private handleAuthAction(tokenState: TokenState, usuarioState: UserFuncionarioState): AuthInterceptionAction {
 

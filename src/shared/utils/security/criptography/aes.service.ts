@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Codec } from "@mapping/dependencies";
+import { Codec } from "src/shared/utils/dependencies";
 import { CodecImpl, KeyFactory } from "@private";
 
 /**
