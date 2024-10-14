@@ -16,7 +16,7 @@ const LoginViewWrapperConfig: DynamicComponentConfig<ScreenState> = {
 @Component({
   selector: "cl-login-view",
   template: `
-  <ng-template [dynamic]="config"/>
+  <ng-template [dynamic]="config" />
   `
 })
 export class LoginViewWrapperComponent {

@@ -1,0 +1,11 @@
+.dt-login-main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.dt-login-aside-content {
+    width: 550px;
+    height: 100%;
+}

@@ -1,0 +1,25 @@
+:host {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-base-logo {
+    width: 125px;
+    height: 125px;
+}
+
+.login-base-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-base-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
