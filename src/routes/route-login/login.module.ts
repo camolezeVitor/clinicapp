@@ -8,6 +8,7 @@ import { MobileLoginViewComponent } from "./views/mobile/mb-login-view.component
 import { HlmInputDirective } from "@spartan-ng/ui-input-helm";
 import { HlmLabelDirective } from "@spartan-ng/ui-label-helm";
 import { LoginBaseComponent } from "./views/common/login-base/login-base.component";
+import { CLLogoComponent } from "src/shared/utils/components/logo-component/cl-logo.component";
 
 @NgModule({
     declarations: [
@@ -25,7 +26,9 @@ import { LoginBaseComponent } from "./views/common/login-base/login-base.compone
 
         //VISUAL
         HlmInputDirective,
-        HlmLabelDirective
+        HlmLabelDirective,
+
+        CLLogoComponent
     ],
     providers: [
         
